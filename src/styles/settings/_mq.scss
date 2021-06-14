@@ -1,0 +1,35 @@
+@mixin xxs {
+  @media (min-width: 0) {
+    @content;
+  }
+}
+@mixin xs {
+  @media (min-width: 480px) {
+    @content;
+  }
+}
+@mixin xs2 {
+  @media (min-width: 501px) {
+    @content;
+  }
+}
+@mixin s {
+  @media (min-width: 640px) {
+    @content;
+  }
+}
+@mixin m {
+  @media (min-width: 760px) {
+    @content;
+  }
+}
+@mixin l {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+@mixin l1 {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}

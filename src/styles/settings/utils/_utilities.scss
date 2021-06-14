@@ -1,0 +1,47 @@
+// Utilities
+.u-align-left {
+  text-align: left;
+}
+.u-align-center {
+  text-align: center;
+}
+.u-align-right {
+  text-align: right;
+}
+// Fonts
+.u-heading-1 {
+  line-height: 1;
+  font-weight: 700;
+  font-size: 54px;
+  @include l {
+    font-size: 64px;
+  }
+}
+.u-heading-2 {
+  font-weight: 600;
+  font-size: 38px;
+  @include l {
+    font-size: 48px;
+  }
+}
+.u-heading-3 {
+  font-weight: 600;
+  font-size: 36px;
+}
+.u-heading-4 {
+  font-size: 24px;
+  font-weight: 500;
+}
+.u-heading-5 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.u-paragraph {
+  line-height: 26px;
+  font-size: 18px;
+  font-family: $font-ambit;
+}
+.u-paragraph-small {
+  font-size: 14px;
+  font-family: $font-ambit;
+}
