@@ -31,7 +31,7 @@ function Construction () {
             <div className="c-landing__content">
             <h1 className="c-landing__content-title"></h1>
             <div className="c-landing__wrapper">
-                <h1 className="c-landing__wrapper-title">UR</h1>
+                <img className="c-landing__wrapper-logo" src="/icons/ur-logo__icon.svg" alt="Untitled Recordings Logo" />
             </div>
             </div>
         </div>
