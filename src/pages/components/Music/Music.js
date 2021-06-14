@@ -5,22 +5,23 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 function Music () {
   const collection = music.collection
   const [toggle, setToggle] = useState(false)
-  const renderArtists = (artists, parentIndex) => {
+  const renderArtists = (artists) => {
     if (artists.length < 1) {
       return
     } else {
       return (
-        <div key={parentIndex}>
           <p className='c-music-modal__tags'>
             UR Artist(s):
             {artists.map((artist, i) => (
-              <span key={i}>
-                {i > 0 && ', '}
-                {artist.name}
-              </span>
-            ))}
-          </p>
-        </div>
+            <a
+              key={i}
+              href={artists.url}
+            >
+              {i > 0 && ', '}
+              {` ${artist.name}`}
+            </a>
+          ))}
+        </p>
       )
     }
   }
@@ -81,14 +82,14 @@ function Music () {
       </h2>
       <div className='c-music-row__group c-carousel js-carousel js-carousel-blog'>
         {collection.map((collection, i) => (
-          <section className='c-music-block' key={i}>
+          <article className='c-music-block' key={i}>
             <div
               className='c-music-block__image'
               style={{ backgroundImage: `url(${collection.image})` }}
               alt={collection.title}
             >
               <div className='c-music-block__overlay'></div>
-              <h4 className='c-music-block__heading u-heading-4 u-align-center'></h4>
+              <h4 className='c-music-block__heading u-heading-4 u-align-center'>{collection.title}</h4>
               <button
                 className='c-music-block__link o-button-secondary'
                 onClick={toggleModalState}
@@ -97,7 +98,7 @@ function Music () {
               </button>
             </div>
             <div className='c-music-block__bg'></div>
-          </section>
+          </article>
         ))}
       </div>
       {toggle && (

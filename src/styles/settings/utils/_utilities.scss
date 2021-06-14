@@ -12,36 +12,40 @@
 .u-heading-1 {
   line-height: 1;
   font-weight: 700;
-  font-size: 54px;
+  // font-size: 54px;
+  font-size: calc(4.209rem/1.5);
   @include l {
-    font-size: 64px;
+    // font-size: 64px;
+    font-size: 4.209rem;
   }
 }
 .u-heading-2 {
   font-weight: 600;
-  font-size: 38px;
+  font-size: calc(3.157rem/1.5);
   @include l {
-    font-size: 48px;
+    font-size: calc(3.157rem/1.5);
   }
 }
 .u-heading-3 {
   font-weight: 600;
-  font-size: 36px;
+  font-size: calc(2.369rem/1.5);
 }
 .u-heading-4 {
-  font-size: 24px;
+  font-size: calc(1.777rem/1.5);
   font-weight: 500;
 }
 .u-heading-5 {
-  font-size: 20px;
+  font-size: calc(1.333rem/1.5);
   font-weight: 500;
 }
 .u-paragraph {
   line-height: 26px;
-  font-size: 18px;
+  font-size: 16px;
+  // font-size: 0.75rem;
   font-family: $font-ambit;
 }
 .u-paragraph-small {
   font-size: 14px;
+  // font-size: 0.75rem;
   font-family: $font-ambit;
 }

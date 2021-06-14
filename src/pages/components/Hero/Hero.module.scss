@@ -35,7 +35,6 @@
     top: 0;
     width: 100%;
     margin-right: 0;
-    margin-top: 20px;
     height: 6px;
     background-image: linear-gradient(45deg, $color-purple, $color-blue);
   }
@@ -55,9 +54,7 @@
   &__info {
     padding-left: 5%;
     padding-right: 5%;
-    &:last-of-type {
-      padding-top: 24px;
-    }
+    padding-top: 12px;
   }
   &__cta {
     margin: 0 auto;

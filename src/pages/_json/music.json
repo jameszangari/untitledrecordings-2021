@@ -1,12 +1,55 @@
 {
   "collection": [
     {
+      "title": "Violate",
+      "image": "/images/music/violate.jpeg",
+      "artists": [
+        {
+          "name": "Amir L"
+        }
+      ],
+      "genre": "Hip Hop",
+      "year": "2020",
+      "type": "Album",
+      "stream": [
+        {
+          "label": "Spotify",
+          "icon": "spotify",
+          "url": "test"
+        },
+        {
+          "label": "Amazon",
+          "icon": "amazon",
+          "url": "test"
+        },
+        {
+          "label": "Apple",
+          "icon": "apple",
+          "url": "test"
+        },
+        {
+          "label": "Google Play",
+          "icon": "google",
+          "url": "test"
+        },
+        {
+          "label": "SoundCloud",
+          "icon": "soundcloud",
+          "url": "test"
+        },
+        {
+          "label": "",
+          "icon": "",
+          "url": ""
+        }
+      ]
+    },
+    {
       "title": "Skeletons",
       "image": "/images/music/skeletons.jpg",
       "artists": [
         {
-          "name": "James Cliff",
-          "url": "/artists/jamescliff"
+          "name": "James Cliff"
         },
         {
           "name": "Liam Odd",
@@ -54,12 +97,10 @@
       "image": "/images/music/skeletons.jpg",
       "artists": [
         {
-          "name": "James Cliff",
-          "url": "/artists/jamescliff"
+          "name": "James Cliff"
         },
         {
-          "name": "Liam Odd",
-          "url": "/artists/liamodd"
+          "name": "Liam Odd"
         }
       ],
       "genre": "Hip Hop",
@@ -103,12 +144,10 @@
       "image": "/images/music/skeletons.jpg",
       "artists": [
         {
-          "name": "James Cliff",
-          "url": "/artists/jamescliff"
+          "name": "James Cliff"
         },
         {
-          "name": "Liam Odd",
-          "url": "/artists/liamodd"
+          "name": "Liam Odd"
         }
       ],
       "genre": "Hip Hop",
@@ -152,12 +191,10 @@
       "image": "/images/music/skeletons.jpg",
       "artists": [
         {
-          "name": "James Cliff",
-          "url": "/artists/jamescliff"
+          "name": "James Cliff"
         },
         {
-          "name": "Liam Odd",
-          "url": "/artists/liamodd"
+          "name": "Liam Odd"
         }
       ],
       "genre": "Hip Hop",
@@ -201,61 +238,10 @@
       "image": "/images/music/skeletons.jpg",
       "artists": [
         {
-          "name": "James Cliff",
-          "url": "/artists/jamescliff"
+          "name": "James Cliff"
         },
         {
-          "name": "Liam Odd",
-          "url": "/artists/liamodd"
-        }
-      ],
-      "genre": "Hip Hop",
-      "year": "2020",
-      "type": "Single",
-      "stream": [
-        {
-          "label": "Spotify",
-          "icon": "spotify",
-          "url": "test"
-        },
-        {
-          "label": "Amazon",
-          "icon": "amazon",
-          "url": "test"
-        },
-        {
-          "label": "Apple",
-          "icon": "apple",
-          "url": "test"
-        },
-        {
-          "label": "Google Play",
-          "icon": "google",
-          "url": "test"
-        },
-        {
-          "label": "SoundCloud",
-          "icon": "soundcloud",
-          "url": "test"
-        },
-        {
-          "label": "",
-          "icon": "",
-          "url": ""
-        }
-      ]
-    },
-    {
-      "title": "Skeletons",
-      "image": "/images/music/skeletons.jpg",
-      "artists": [
-        {
-          "name": "James Cliff",
-          "url": "/artists/jamescliff"
-        },
-        {
-          "name": "Liam Odd",
-          "url": "/artists/liamodd"
+          "name": "Liam Odd"
         }
       ],
       "genre": "Hip Hop",

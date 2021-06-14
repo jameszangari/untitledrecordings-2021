@@ -3,7 +3,7 @@
     "title": "Untitled Recordings",
     "description": "Untitled Recordings is a brand representing a collective group of artists in the greater Philadelphia area.",
     "keywords": "music philadelphia brand",
-    "image": ""
+    "image": "/icons/ur-logo__favicon.png"
   },
   "header": {
     "title": "",
@@ -38,6 +38,7 @@
   "artists": [
     {
       "name": "Amir L",
+      "url": "amirl",
       "image": "/images/people/amirl.jpg",
       "roles": ["Producer"],
       "socials": [
@@ -70,6 +71,7 @@
     },
     {
       "name": "Cardinal Sin",
+      "url": "cardinalsin",
       "image": "/images/people/cardinalsin.jpg",
       "roles": ["Producer", "Engineer"],
       "socials": [
@@ -102,6 +104,7 @@
     },
     {
       "name": "Catullus",
+      "url": "cardinalsin",
       "image": "/images/people/catullus.jpg",
       "roles": ["Producer", "Engineer"],
       "socials": [
@@ -134,6 +137,7 @@
     },
     {
       "name": "James Cliff",
+      "url": "jamescliff",
       "image": "/images/people/jamescliff.jpg",
       "roles": ["Producer", "Engineer"],
       "socials": [
@@ -166,6 +170,7 @@
     },
     {
       "name": "Liam Odd",
+      "url": "liamodd",
       "image": "/images/people/liamodd.jpg",
       "roles": ["Producer", "Engineer"],
       "socials": [
@@ -198,6 +203,7 @@
     },
     {
       "name": "Nahom",
+      "url": "nahom",
       "image": "/images/people/nahom.jpeg",
       "roles": ["Producer", "Engineer"],
       "socials": [

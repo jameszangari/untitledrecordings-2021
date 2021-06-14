@@ -33,6 +33,10 @@
   }
 }
 
+html, body {
+  scroll-behavior: smooth;
+}
+
 html {
   overflow-x: hidden;
 }

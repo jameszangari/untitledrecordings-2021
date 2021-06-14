@@ -49,13 +49,13 @@ function Artists () {
     }
   }
   return (
-    <section className='c-artists-row'>
+    <section className='c-artists-row' id='artists'>
       <h1 className='c-artists-row__heading u-heading-2 u-align-center'>
         Our Artists
       </h1>
       <div className='c-artists-row__group'>
         {artists.map((artist, i) => (
-          <section className='c-artist-block' key={i}>
+          <section className='c-artist-block' key={i} id={'#' + artist.url }>
             <div
               className='c-artist-block__image'
               style={{ backgroundImage: `url(${artist.image})` }}
