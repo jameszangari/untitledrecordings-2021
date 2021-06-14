@@ -6,7 +6,7 @@ export default function Index () {
   return (
     <>
       <Head>
-        <title>{index.meta.title}</title>
+        <title>🚧 {index.meta.title} 🚧</title>
         <link rel='icon' href={index.meta.image} />
         <meta property='og:title' content={index.meta.title} />
         <meta property='og:description' content={index.meta.description} />

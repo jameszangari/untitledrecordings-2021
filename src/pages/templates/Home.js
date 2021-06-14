@@ -7,19 +7,21 @@ import { fas } from '@fortawesome/free-solid-svg-icons'
 
 library.add(fab, fas)
 
-import Hero from '@/components/Hero/Hero'
-import Artists from '@/components/Artists/Artists'
-import Music from '@/components/Music/Music'
-import Landing from '@/components/Landing/Landing'
+import Construction from '@/components/Construction/Construction'
+// import Hero from '@/components/Hero/Hero'
+// import Artists from '@/components/Artists/Artists'
+// import Music from '@/components/Music/Music'
+// import Landing from '@/components/Landing/Landing'
 
 export default function Home () {
   return (
     <>
       <main id='main'>
-        <Landing />
+        <Construction />
+        {/* <Landing />
         <Hero />
         <Artists />
-        <Music />
+        <Music /> */}
       </main>
     </>
   )
