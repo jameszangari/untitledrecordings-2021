@@ -60,7 +60,6 @@ function Landing () {
                 <div className="c-landing__wrapper-bottom">
                     <h4 className="c-landing__wrapper-bottom-type" dangerouslySetInnerHTML={{__html: landing.type + " by" }}/>
                     <h2 className="c-landing__wrapper-bottom-artists" dangerouslySetInnerHTML={{__html: landing.artists }}/>
-                    <h6 className="c-landing__wrapper-bottom-date" dangerouslySetInnerHTML={{__html: landing.date }}/>
                 </div>
             </div>
             <button className="o-button-primary">Stream</button>

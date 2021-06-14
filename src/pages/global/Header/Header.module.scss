@@ -3,7 +3,7 @@
 .c-header {
   height: 50px;
   &__logo {
-    font-family: $font-ambit;
+    font-family: $font-aviano;
     font-size: 24px;
     color: $color-white;
     padding-left: 20px;
@@ -17,9 +17,6 @@
     z-index: 998;
     &-icon {
       display: flex;
-    }
-    &-full {
-      display: none;
     }
   }
   &__line {
