@@ -27,12 +27,12 @@ function MyApp ({ Component, pageProps }) {
   return (
     <>
       {/* <GlobalStyles /> */}
-      <a href='#main' className='skip-to-content-link'>
+      {/* <a href='#main' className='skip-to-content-link'>
         Skip to main content
-      </a>
-      <Header />
+      </a> */}
+      {/* <Header /> */}
       <Component className='' {...pageProps} />
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }
