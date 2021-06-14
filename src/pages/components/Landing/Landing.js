@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Marquee from "react-fast-marquee";
 import landing from '@/json/landing'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { getAverageColor } from 'fast-average-color-node';
+// import { getAverageColor } from 'fast-average-color-node';
 
 function Landing () {
     const [open, setOpen] = useState(true)
@@ -12,11 +12,11 @@ function Landing () {
         setOpen(!open)
     }
     
-    let hexColor
-    getAverageColor(landing.image).then(color => {
-        hexColor = color.hex
-    })
-    console.log("hex color " + hexColor)
+    // let hexColor
+    // getAverageColor(landing.image).then(color => {
+    //     hexColor = color.hex
+    // })
+    // console.log("hex color " + hexColor)
 
     return (
         <section> {open &&
