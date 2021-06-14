@@ -1,9 +1,6 @@
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import * as ga from '@/lib/ga' // Google Analytics
-import Header from '@/global/Header/Header'
-import Footer from '@/global/Footer/Footer'
-// import GlobalStyles from '@/styles/globalStyles'
 import '@/styles/globals.scss'
 
 function MyApp ({ Component, pageProps }) {
