@@ -29,7 +29,7 @@ class MyDocument extends Document {
 
   render () {
     return (
-      <Html className="is-open">
+      <Html>
         <Head>
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           {/* <script
@@ -49,7 +49,7 @@ class MyDocument extends Document {
             }}
           /> */}
         </Head>
-        <body className="is-open">
+        <body>
           <Main />
           <NextScript />
         </body>

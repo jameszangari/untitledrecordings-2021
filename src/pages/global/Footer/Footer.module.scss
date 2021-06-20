@@ -4,7 +4,7 @@
   position: sticky;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   @include l {
     flex-direction: row;
@@ -34,24 +34,9 @@
     &--logo {
       font-family: $font-aviano;
       font-size: 24px;
-      width: min-intrinsic;
-      width: -webkit-min-content;
-      width: -moz-min-content;
-      width: min-content;
-      display: table-caption;
-      display: -ms-grid;
-      -ms-grid-columns: min-content;
       @include l {
         flex-direction: row;
         align-items: unset;
-      }
-    }
-    &--bio {
-      color: $color-gray;
-      width: max-content;
-      margin-top: 6px;
-      &:first-of-type {
-        margin-top: 16px;
       }
     }
     &--copyright {
@@ -63,6 +48,17 @@
       @include xs {
         text-align: left;
       }
+    }
+  }
+  &__social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+    padding-top: 24px;
+    &--image {
+      height: 24px;
+      width: 24px;
     }
   }
   &__menu {
@@ -92,20 +88,11 @@
       @include l {
         text-align: right;
       }
-      &-header {
-        text-transform: uppercase;
-        font-weight: 600;
-      }
-      &-body {
-        padding-top: 22px;
-      }
-      &-button {
-        margin-top: 16px;
-      }
       &-link {
-        padding-top: 60px;
+        padding-top: 32px;
         &-button {
           display: inline-block;
+          line-height: 1;
           text-decoration: none;
           transition: color 0.3s;
           color: $color-blue;
@@ -130,42 +117,5 @@
         }
       }
     }
-  }
-  &__sub-nav {
-    padding-top: 22px;
-    &--item {
-      padding-bottom: 16px;
-      &:last-child {
-        padding-bottom: 0;
-      }
-    }
-    &--link {
-      display: inline-block;
-      text-decoration: none;
-      transition: color 0.3s;
-      transition: opacity 0.3s;
-      &::after {
-        content: '';
-        display: block;
-        width: 0;
-        height: 1.5px;
-        background: $color-blue;
-        transition: width 0.3s;
-      }
-      &:hover::after {
-        width: 100%;
-      }
-      &:hover {
-        opacity: 0.75;
-      }
-    }
-  }
-  &__link--header {
-    color: $color-blue;
-    font-weight: 600;
-    text-transform: uppercase;
-    margin-top: 0;
-    transition: 0.3s;
-    cursor: default;
   }
 }

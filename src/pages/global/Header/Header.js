@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import MediaQuery from 'react-responsive'
 import 'hamburgers/dist/hamburgers.css'
-import * as ga from '@/lib/ga' // Google Analytics
+// import * as ga from '@/lib/ga' // Google Analytics
 import index from '@/json/index'
 
 function HeaderGlobal () {

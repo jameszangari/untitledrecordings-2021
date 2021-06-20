@@ -1,7 +1,5 @@
 import React from 'react'
 import * as ga from '@/lib/ga' // Google Analytics
-// import {} from '@/global/FooterStyles'
-// import { FooterWrapper } from './FooterStyles'
 import './Footer.module.scss'
 import index from '@/json/index'
 
@@ -25,25 +23,15 @@ function Footer () {
           <a className='c-footer-navigation__logo-group--logo' href='/'>
             {index.footer.title}
           </a>
-          <p
-            className='c-footer-navigation__logo-group--bio'
-            dangerouslySetInnerHTML={{ __html: index.footer.description }}
-          />
+          <div className="c-footer-navigation__social">
+            {index.footer.socials.map((social, i) =>
+              <a href={social.url} key={i}>
+                <img src={social.src} alt={social.label} className="c-footer-navigation__social--image"/>
+              </a>
+            )}
+          </div>
           <p className='c-footer-navigation__logo-group--copyright'>
-            &copy; {getCurrentYear()} {index.footer.title}
-          </p>
-        </div>
-        <ul className='c-footer-navigation__menu--side-group'>
-          <p className='c-footer-navigation__menu--side-group-header'>NEED A SESSION?</p>
-          <p className='c-footer-navigation__menu--side-group-body'>Book your studio time today.</p>
-          <a
-            className='c-footer-navigation__menu--side-group-button o-button-secondary'
-            href=''
-          >
-            Contact Us
-          </a>
-          <p className='c-footer-navigation__menu--side-group-link'>
-            Website by
+            &copy; {getCurrentYear()} {index.footer.title} <b>|</b> Website by
             <a
               className='c-footer-navigation__menu--side-group-link-button'
               href='https://jamescliff.com'
@@ -51,7 +39,7 @@ function Footer () {
               target='_blank'
             >James Cliff</a>
           </p>
-        </ul>
+        </div>
       </div>
     </div>
   )

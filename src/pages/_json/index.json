@@ -237,19 +237,30 @@
   ],
   "footer": {
     "title": "Untitled Recordings",
-    "description": "🎙 Recording  |  🎹 Production <br> 🎧 Mixing  |  💿 Mastering",
     "socials": [
       {
-        "label": "",
-        "url": ""
+        "label": "discord",
+        "color": "#5865F2",
+        "src": "/icons/discord.svg",
+        "url": "/"
       },
       {
-        "label": "",
-        "url": ""
+        "label": "instagram",
+        "color": "#e1306c",
+        "src": "/icons/instagram.svg",
+        "url": "https://instagram.com/untitledrecordings"
       },
       {
-        "label": "",
-        "url": ""
+        "label": "twitter",
+        "color": "#1da1f2",
+        "src": "/icons/twitter.svg",
+        "url": "https://twitter.com/_untrecordings"
+      },
+      {
+        "label": "twitch",
+        "color": "#6441A4",
+        "src": "/icons/twitch.svg",
+        "url": "https://twitch.tv/untitledrecordings"
       }
     ]
   }

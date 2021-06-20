@@ -6,12 +6,31 @@
     top: 0;
     background: $color-black;
     &__close {
-        font-size: 36px;
+        // font-size: 36px;
         width: 24px;
         position: fixed;
         top: 50px;
         right: 25px;
-        cursor: pointer;
+        // cursor: pointer;
+        // position: relative;
+        display: inline-block;
+        // width: 40px;
+        // height: 22px;
+        align-self: center;
+        z-index: 999;
+        input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        &-toggle {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
     }
     &__content {
         display: flex;
@@ -61,3 +80,54 @@
         }
     }
 }
+
+.c-dark-mode {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+    align-self: center;
+    z-index: 999;
+
+    input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    
+}
+  
+.c-dark-mode__toggle {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    // background-color: $color-white;
+    // -webkit-transition: 0.4s;
+    // transition: 0.4s;
+    // border-radius: 30px;
+
+    // &:before {
+    //     position: absolute;
+    //     content: "";
+    //     height: 16px;
+    //     width: 16px;
+    //     left: 4px;
+    //     bottom: 3px;
+    //     background-color: $color-blue;
+    //     -webkit-transition: 0.4s;
+    //     transition: 0.4s;
+    //     border-radius: 50%;
+    // }
+}  
+
+// input:checked + .c-dark-mode__toggle {
+//     background-color: $color-black;
+// }
+  
+// input:checked + .c-dark-mode__toggle:before {
+//     transform: translateX(17px);
+//     background-color: $color-white;
+// }
