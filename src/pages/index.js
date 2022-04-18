@@ -1,23 +1,17 @@
-import Head from 'next/head'
-import Home from '@/templates/Home'
-import index from '@/json/index'
+import Song from "@/components/Song";
 
-export default function Index () {
+export default function Index() {
+  let songs = [
+    "https://open.spotify.com/track/3VBDGFrGgTzqnG01UKMx7p?si=02443a6a34a64dce",
+    "https://open.spotify.com/track/1miBEMjH0TTnNyJd55exKK?si=5c4e37997ae24a55",
+    "https://open.spotify.com/track/1O6eGZ0eCbXxkxBqMdOnGV?si=5382a91b18364d9c",
+  ];
+
   return (
-    <>
-      <Head>
-        <title>🚧 {index.meta.title} 🚧</title>
-        <link rel='icon' href={index.meta.image} />
-        <meta property='og:title' content={index.meta.title} />
-        <meta property='og:description' content={index.meta.description} />
-        <meta name='keywords' content={index.meta.keywords} />
-        <meta property='og:image' content={index.meta.image} />
-        <link href="/fonts/fonts.css" rel="stylesheet" />
-        <link href="fontawesome/css/fontawesome.css" rel="stylesheet" />
-        <link href="fontawesome/css/brands.css" rel="stylesheet" />
-        <link href="fontawesome/css/solid.css" rel="stylesheet" />
-      </Head>
-      <Home />
-    </>
-  )
+    <div className="w-full h-full">
+      {songs.map((item, i) => {
+        return <Song song={item} key={i} />;
+      })}
+    </div>
+  );
 }
