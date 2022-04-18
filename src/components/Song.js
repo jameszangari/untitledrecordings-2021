@@ -23,19 +23,24 @@ export default function Song({ song }) {
 
   if (isLoading) return <p>Loading...</p>;
   if (!data) return <p>No profile data</p>;
-  // console.log(data);
+  console.log(data);
 
   const services = data.services;
   // console.log(services);
 
   return (
-    <div className="flex flex-col justify-center items-center p-4">
-      <h2>{data.author}</h2>
-      <h1>{data.metadata_title}</h1>
+    <div>
+      {/* <h2>{data.author}</h2> */}
+      {/* <h1>{data.metadata_title}</h1> */}
+      <h1>{data.services[1].owner.username}</h1>
+      <h1>
+        {data.services[1].album.title
+          ? data.services[1].album.title
+          : data.metadata_title}
+      </h1>
+      <h1>{data.services[1].type}</h1>
       <div className="flex flex-row gap-4">
         {services.slice(0, 5).map((item, i) => {
-          console.log(item.service_name);
-          console.log(item.url);
           const name = item.service_name;
           const url = item.url;
           return (
@@ -53,6 +58,7 @@ export default function Song({ song }) {
       <Image
         alt={data.author + data.metadata_title}
         src={data.image_url}
+        loading={"lazy"}
         height={320}
         width={320}
         className={"w-20 h-20 max-w-full"}
