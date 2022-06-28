@@ -1,5 +1,9 @@
 import { useState } from "react";
 import { Client } from "@notionhq/client";
+import dynamic from "next/dynamic";
+const ReactPlayer = dynamic(() => import("react-player/youtube"), {
+  ssr: false,
+});
 import Button from "@/components/Button";
 import Artist from "@/components/Artist";
 import Song from "@/components/Song";
@@ -7,26 +11,18 @@ import index from "@/json/index";
 
 export default function Index({ results }) {
   const allArtists = index.artists;
-
   const getArtists = () => {
     let artists = [];
     console.log(allArtists);
     allArtists.forEach((post) => {
-      artists.push(
-        <Artist
-          key={post.id}
-          props={post}
-          // url={post.properties.url.url}
-        />
-      );
+      artists.push(<Artist key={post.id} props={post} />);
     });
     console.log(artists);
     return artists;
-    // return artists[0]; // TODO: remove 0 for testing
   };
+
   const getProjects = () => {
     let projects = [];
-    // console.log(projects);
     results.forEach((post) => {
       if (post.properties.name.title[0].plain_text) {
         projects.push(
@@ -72,6 +68,16 @@ export default function Index({ results }) {
           label="Load More"
           props="mx-auto block"
         />
+      </section>
+      <section className="pb-24" id="music">
+        <h1 className="uppercase text-center font-bold text-4xl py-16">
+          Featured Videos
+        </h1>
+        <div className="flex flex-row flex-wrap justify-center items-center p-4 max-w-6xl mx-auto">
+          <ReactPlayer
+            url={`https://www.youtube.com/watch?v=wOQR7IU46yk&t=6s`}
+          />
+        </div>
       </section>
     </div>
   );
