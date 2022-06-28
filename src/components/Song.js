@@ -42,6 +42,7 @@ export default function Song({ url, props }) {
           height={24}
           width={24}
           className="block"
+          loading="lazy"
         />
       </div>
     );
