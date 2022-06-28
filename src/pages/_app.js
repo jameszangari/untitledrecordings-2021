@@ -73,7 +73,7 @@ function MyApp({ Component, pageProps }) {
       <a href="#main" className="skip-to-content-link">
         Skip to main content
       </a>
-      <main id="main" className="touch-none">
+      <main id="main">
         <Component {...pageProps} />
       </main>
     </>
