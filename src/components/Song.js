@@ -12,7 +12,7 @@ import Link from "next/link";
 
 export default function Song({ url, props }) {
   const [isOpen, setIsOpen] = useState(false);
-  console.log(isOpen);
+  // console.log(isOpen);
 
   const [data, setData] = useState(null);
   const [isLoading, setLoading] = useState(false);
@@ -32,14 +32,26 @@ export default function Song({ url, props }) {
       .catch((err) => console.error(err));
   }, [url]);
 
-  if (isLoading) return <p>Loading...</p>;
-  if (!data) return <p>No data</p>;
-  console.log(data);
+  if (isLoading)
+    return (
+      <div className="h-80 w-80 flex flex-row justify-center items-center uppercase">
+        <p className="mr-2">Loading</p>
+        <Image
+          src="/loading.gif"
+          alt="Loading"
+          height={24}
+          width={24}
+          className="block"
+        />
+      </div>
+    );
+  if (!data) return <p className="h-80 w-80 text-center">No data</p>;
+  // console.log(data);
 
   const services = data.services;
 
   return (
-    <article className="h-80 w-80 m-1">
+    <article className="h-64 w-64 sm:h-80 sm:w-80 m-1">
       {/* <h2>{data.author}</h2> */}
       {/* <h1>{data.metadata_title}</h1> */}
       <Transition
@@ -71,7 +83,7 @@ export default function Song({ url, props }) {
                 {services.slice(0, 5).map((item, i) => {
                   const name = item.service_name;
                   const src = item.url;
-                  console.log(item);
+                  // console.log(item);
                   return (
                     <Link href={src} passHref key={i}>
                       <a>
@@ -109,24 +121,26 @@ export default function Song({ url, props }) {
           </div>
         </Dialog>
       </Transition>
-      <span className="opacity-0 hover:opacity-100 transition-all bg-black/75 cursor-pointer absolute z-10 h-80 w-80 grid place-items-center">
-        {/* <button onClick={() => setIsOpen(true)}>Stream</button> */}
+      <div className="h-64 w-64 sm:h-80 sm:w-80 opacity-0 hover:opacity-100 transition-all bg-black/75 cursor-pointer absolute z-10 grid place-items-center">
         <Button
-          color="ur_red"
-          hover="ur_dark_red"
-          label="Stream"
+          color={"red"}
+          label={"Stream"}
+          props={""}
           click={() => setIsOpen(true)}
         />
-      </span>
-
-      <Image
-        alt={data.author + data.metadata_title}
-        src={data.image_url ? data.image_url : ""}
-        loading={"lazy"}
-        height={320}
-        width={320}
-        className={"w-20 h-20 max-w-full"}
-      />
+      </div>
+      <div className="h-64 w-64 sm:h-80 sm:w-80 z-0">
+        {data.image_url && (
+          <Image
+            alt={data.author + " - " + data.metadata_title}
+            src={data.image_url}
+            loading={"lazy"}
+            height={320}
+            width={320}
+            // className={"w-80 h-80 max-w-full"}
+          />
+        )}
+      </div>
     </article>
   );
 }

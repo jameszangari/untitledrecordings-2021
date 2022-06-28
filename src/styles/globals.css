@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("./normalize.css");
 
 html,
 body {
@@ -18,4 +19,27 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.skip-to-content-link {
+  left: -999px;
+  position: absolute;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: -999;
+}
+.skip-to-content-link:focus {
+  left: auto;
+  top: auto;
+  width: 30%;
+  height: auto;
+  overflow: auto;
+  margin: 0 35%;
+  padding: 5px;
+  font-size: 20px;
+  outline: 3px solid red;
+  text-align: center;
+  z-index: 999;
 }
