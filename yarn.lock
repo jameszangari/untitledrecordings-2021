@@ -1000,6 +1000,11 @@
     "merge2" "^1.4.1"
     "slash" "^3.0.0"
 
+"hamburgers@^1.2.1":
+  "integrity" "sha512-uFuVVF7/MeUtRWrA+S1FGGo4iVi7RgPzZAmljBnSeDh4snOZzaQ+oB6CI1m4vKD5RGz9s70ufgiJLxgivqA26Q=="
+  "resolved" "https://registry.npmjs.org/hamburgers/-/hamburgers-1.2.1.tgz"
+  "version" "1.2.1"
+
 "has-bigints@^1.0.1":
   "integrity" "sha512-LSBS2LjbNBTf6287JEbEzvJgftkF5qFkmCo9hDRpAzKhUOlJ+hx8dd4USs00SgsUNwc4617J9ki5YtEClM2ffA=="
   "resolved" "https://registry.npmjs.org/has-bigints/-/has-bigints-1.0.1.tgz"

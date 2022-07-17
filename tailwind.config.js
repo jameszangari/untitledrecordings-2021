@@ -5,8 +5,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      display: ["group-hover"],
       boxShadow: {
         whiteShadow: "3px 3px 0px #f9f9f9",
+        blackShadow: "3px 3px 0px #000000",
+      },
+      fontFamily: {
+        primary: ['"Ambit"'],
+        secondary: ['"Aviano Future"'],
       },
       colors: {
         ur_black: "#000000",

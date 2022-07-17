@@ -4,7 +4,6 @@ import Button from "./Button";
 import Close from "./Icons/close";
 import Spotify from "./Icons/spotify";
 import AppleMusic from "./Icons/applemusic";
-import Deezer from "./Icons/deezer";
 import Tunes from "./Icons/itunes";
 import YouTube from "./Icons/youtube";
 import Image from "next/image";
@@ -52,9 +51,8 @@ export default function Song({ url, props }) {
   const services = data.services;
 
   return (
-    <article className="h-64 w-64 sm:h-80 sm:w-80 m-1">
-      {/* <h2>{data.author}</h2> */}
-      {/* <h1>{data.metadata_title}</h1> */}
+    <article className="m-1">
+      {/* <article className="h-64 w-64 sm:h-80 sm:w-80 m-1"> */}
       <Transition
         show={isOpen}
         enter="transition duration-100 ease-out"
@@ -70,45 +68,63 @@ export default function Song({ url, props }) {
           className="relative z-50"
         >
           {/* The backdrop, rendered as a fixed sibling to the panel container */}
-          <div className="fixed inset-0 bg-black/75" aria-hidden="true" />
-
+          <div
+            className="fixed inset-0 bg-ur_dark_gray/30"
+            aria-hidden="true"
+          />
           {/* Full-screen container to center the panel */}
           <div className="fixed inset-0 flex items-center justify-center p-4">
             {/* The actual dialog panel  */}
-            <Dialog.Panel className="mx-auto w-full max-w-3xl rounded bg-black p-12 relative">
-              <h1 className="text-3xl text-center pb-8">
+            <Dialog.Panel className="mx-auto w-full max-w-3xl rounded bg-ur_black p-12 relative">
+              <h1 className="ur-heading text-center">
                 {data.metadata_title + " " + data.metadata_description}
               </h1>
+              <div className="h-[6px] w-[200px] bg-gradient-to-r from-ur_purple to-ur_blue mt-[6px] mx-auto"></div>
               {/* <h1 className="text-base">{data.services[1].type}</h1> */}
-              <div className="flex flex-row justify-center gap-12 pb-8">
+              <h2 className="ur-title text-center pt-8">Stream:</h2>
+              <div className="flex flex-row mt-12 gap-8 justify-center">
                 {services.slice(0, 5).map((item, i) => {
                   const name = item.service_name;
                   const src = item.url;
-                  // console.log(item);
-                  return (
-                    <Link href={src} passHref key={i}>
-                      <a>
-                        {name === "audiomack" ? (
-                          "mack"
-                        ) : name === "spotify" ? (
-                          <Spotify className="h-12" />
-                        ) : name === "apple-music" ? (
-                          <AppleMusic className="h-12" />
-                        ) : name === "deezer" ? (
-                          <Deezer className="h-12" />
-                        ) : name === "itunes" ? (
-                          <Tunes className="h-12" />
-                        ) : name === "youtube" ? (
-                          <YouTube className="h-12" />
-                        ) : (
-                          name.replace(/-/g, "")
-                        )}
-                      </a>
-                    </Link>
-                  );
+                  if (name.includes("spotify")) {
+                    return (
+                      <Link href={src} passHref key={i}>
+                        <a target="_blank" rel="noopener noreferrer">
+                          <Spotify className="h-14" />
+                        </a>
+                      </Link>
+                    );
+                  }
+                  if (name.includes("apple-music")) {
+                    return (
+                      <Link href={src} passHref key={i}>
+                        <a target="_blank" rel="noopener noreferrer">
+                          <AppleMusic className="h-14" />
+                        </a>
+                      </Link>
+                    );
+                  }
+                  if (name.includes("itunes")) {
+                    return (
+                      <Link href={src} passHref key={i}>
+                        <a target="_blank" rel="noopener noreferrer">
+                          <Tunes className="h-14" />
+                        </a>
+                      </Link>
+                    );
+                  }
+                  if (name.includes("youtube")) {
+                    return (
+                      <Link href={src} passHref key={i}>
+                        <a target="_blank" rel="noopener noreferrer">
+                          <YouTube className="h-14" />
+                        </a>
+                      </Link>
+                    );
+                  }
                 })}
               </div>
-              <audio controls src={data.preview_url}>
+              <audio className="mx-auto mt-8" controls src={data.preview_url}>
                 Your browser does not support the
                 <code>audio</code> element.
               </audio>
@@ -122,25 +138,39 @@ export default function Song({ url, props }) {
           </div>
         </Dialog>
       </Transition>
-      <div className="h-64 w-64 sm:h-80 sm:w-80 opacity-0 hover:opacity-100 transition-all bg-black/75 cursor-pointer absolute z-10 grid place-items-center">
+      {/* <div className="h-64 w-64 sm:h-80 sm:w-80 opacity-0 hover:opacity-100 transition-all bg-black/75 cursor-pointer absolute z-10 grid place-items-center">
         <Button
           color={"red"}
           label={"Stream"}
           props={""}
           click={() => setIsOpen(true)}
         />
-      </div>
-      <div className="h-64 w-64 sm:h-80 sm:w-80 z-0">
+      </div> */}
+      <div
+        className="group cursor-pointer sm:max-w-none max-w-[300px]"
+        onClick={() => setIsOpen(true)}
+      >
         {data.image_url && (
           <Image
             alt={data.author + " - " + data.metadata_title}
             src={data.image_url}
             loading={"lazy"}
-            height={320}
-            width={320}
-            // className={"w-80 h-80 max-w-full"}
+            height={640}
+            width={640}
           />
         )}
+        <div className="text-center">
+          <h2 className="ur-subtitle mt-4">{data.author}</h2>
+          <h1 className="ur-title">{data.metadata_title}</h1>
+          <Button
+            color={"gray"}
+            label={"Stream"}
+            props={
+              "w-full justify-center mt-4 mb-8 opacity-0 group-hover:opacity-100"
+            }
+            click={() => setIsOpen(true)}
+          />
+        </div>
       </div>
     </article>
   );

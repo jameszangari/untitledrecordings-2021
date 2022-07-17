@@ -4,62 +4,78 @@ import dynamic from "next/dynamic";
 const ReactPlayer = dynamic(() => import("react-player/youtube"), {
   ssr: false,
 });
-import Button from "@/components/Button";
+import Hero from "@/components/Hero";
 import Artist from "@/components/Artist";
 import Song from "@/components/Song";
+import Button from "@/components/Button";
 import index from "@/json/index";
 
 export default function Index({ results }) {
   const allArtists = index.artists;
   const getArtists = () => {
     let artists = [];
-    console.log(allArtists);
-    allArtists.forEach((post) => {
-      artists.push(<Artist key={post.id} props={post} />);
+    allArtists.forEach((post, i) => {
+      artists.push(<Artist key={i} props={post} />);
     });
-    console.log(artists);
     return artists;
   };
 
   const getProjects = () => {
     let projects = [];
-    results.forEach((post) => {
+    results.forEach((post, i) => {
       if (post.properties.name.title[0].plain_text) {
         projects.push(
-          <Song
-            key={post.id}
-            props={post.properties}
-            url={post.properties.url.url}
-          />
+          <Song key={i} props={post.properties} url={post.properties.url.url} />
         );
       } else {
         return null;
       }
     });
-    console.log(projects);
     return projects;
-    // return projects[0]; // TODO: remove 0 for testing
   };
-  const [postNum, setPostNum] = useState(6); // Default number of posts dislplayed
 
-  function handleClick() {
-    setPostNum((prevPostNum) => prevPostNum + 3); // 3 is the number of posts you want to load per click
-  }
+  const videoLinks = [
+    "https://www.youtube.com/watch?v=Iuo-AM-BaHg",
+    "https://www.youtube.com/watch?v=gaDKOWGSR8o",
+    "https://www.youtube.com/watch?v=OWP9rgFav0g",
+    "https://www.youtube.com/watch?v=wOQR7IU46yk&t=6s",
+  ];
+  const getVideos = () => {
+    let videos = [];
+    {
+      videoLinks.map((link, i) => {
+        videos.push(
+          <div key={i} className="aspect-video w-full h-full max-w-2xl">
+            <ReactPlayer
+              url={link}
+              width="100%"
+              height="100%"
+              className="aspect-video"
+            />
+          </div>
+        );
+      });
+    }
+    return videos;
+  };
+
+  const [postNum, setPostNum] = useState(6);
+  const handleClick = () => {
+    setPostNum((prevPostNum) => prevPostNum + 3);
+  };
+
   return (
     <div className="w-full h-full">
+      <Hero />
       <section className="c-artists-row pb-24" id="artists">
-        <h1 className="uppercase text-center font-bold text-4xl py-16">
-          Our Artists
-        </h1>
+        <h1 className="ur-heading text-center py-10">Our Artists</h1>
         <div className="c-artists-row__group flex flex-row flex-wrap justify-center max-w-6xl mx-auto">
           {getArtists()}
         </div>
       </section>
       <section className="pb-24" id="music">
-        <h1 className="uppercase text-center font-bold text-4xl py-16">
-          Featured Music
-        </h1>
-        <div className="flex flex-row flex-wrap justify-center items-center p-4 max-w-6xl mx-auto">
+        <h1 className="ur-heading text-center py-10">Featured Music</h1>
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center p-4 max-w-6xl mx-auto">
           {getProjects().slice(0, postNum)}
         </div>
         <Button
@@ -69,14 +85,10 @@ export default function Index({ results }) {
           props="mx-auto block"
         />
       </section>
-      <section className="pb-24" id="music">
-        <h1 className="uppercase text-center font-bold text-4xl py-16">
-          Featured Videos
-        </h1>
-        <div className="flex flex-row flex-wrap justify-center items-center p-4 max-w-6xl mx-auto">
-          <ReactPlayer
-            url={`https://www.youtube.com/watch?v=wOQR7IU46yk&t=6s`}
-          />
+      <section className="pb-24" id="videos">
+        <h1 className="ur-heading text-center py-10">Featured Videos</h1>
+        <div className="flex flex-col flex-wrap justify-center items-center gap-8 p-4 max-w-6xl mx-auto">
+          {getVideos()}
         </div>
       </section>
     </div>
