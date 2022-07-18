@@ -43,7 +43,6 @@ function MyApp({ Component, pageProps }) {
         Be sure validate your Twitter card markup on the documentation site. */}
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@untitledrecordings" />
-        {/* <link rel="stylesheet" href="/fonts/fonts.css" /> */}
       </Head>
       <a href="#main" className="skip-to-content-link">
         Skip to main content
