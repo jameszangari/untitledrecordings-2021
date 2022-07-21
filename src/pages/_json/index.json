@@ -1,9 +1,10 @@
 {
   "meta": {
     "title": "Untitled Recordings",
-    "description": "Untitled Recordings is a brand representing a collective group of artists in the greater Philadelphia area.",
-    "keywords": "music philadelphia brand",
-    "image": "/icons/ur-favicon.png"
+    "description": "Untitled Recordings is a brand representing a collective group of artists in the greater New York area.",
+    "descriptionFull": "Untitled Recordings is a brand representing a collective group of artists in the greater New York area. We work with local musicians and provide them with  studio services such as recording, production, mixing, and mastering. Additionally, we have a team of designers and developers to bring your content to life.",
+    "keywords": "music brand",
+    "image": "/meta.jpg"
   },
   "header": {
     "title": "",
@@ -12,7 +13,7 @@
   "navigation": [
     {
       "label": "Home",
-      "url": "/"
+      "url": "/#main"
     },
     {
       "label": "Artists",
@@ -27,8 +28,8 @@
       "url": "/#videos"
     },
     {
-      "label": "Booking",
-      "url": "/#booking"
+      "label": "Contact",
+      "url": "/#contact"
     }
   ],
   "hero": {
@@ -43,27 +44,22 @@
       "socials": [
         {
           "label": "envelope",
-          "style": "fas",
-          "url": "mailto:me@jamescliff.com"
-        },
-        {
-          "label": "instagram",
-          "style": "fab",
-          "url": "https://instagram.com/jamescliffmedia"
-        },
-        {
-          "label": "twitter",
-          "style": "fab",
-          "url": "https://twitter.com/jamescliffmedia"
-        },
-        {
-          "label": "spotify",
-          "style": "fab",
           "url": ""
         },
         {
+          "label": "instagram",
+          "url": "https://www.instagram.com/amir_lighty24"
+        },
+        {
+          "label": "twitter",
+          "url": "https://twitter.com/Amirl24_"
+        },
+        {
+          "label": "spotify",
+          "url": "https://open.spotify.com/artist/7naGFI6C7EI6HBL0GsYXgM?si=gaeJBV_zR-Knld8wrlFATw"
+        },
+        {
           "label": "twitch",
-          "style": "fab",
           "url": ""
         }
       ]
@@ -75,27 +71,22 @@
       "socials": [
         {
           "label": "envelope",
-          "style": "fas",
-          "url": "mailto:me@jamescliff.com"
+          "url": ""
         },
         {
           "label": "instagram",
-          "style": "fab",
-          "url": "https://instagram.com/jamescliffmedia"
+          "url": "https://instagram.com/_cardinalsin"
         },
         {
           "label": "twitter",
-          "style": "fab",
-          "url": "https://twitter.com/jamescliffmedia"
+          "url": "https://twitter.com/_cardinalsin"
         },
         {
           "label": "spotify",
-          "style": "fab",
           "url": ""
         },
         {
           "label": "twitch",
-          "style": "fab",
           "url": ""
         }
       ]
@@ -107,27 +98,22 @@
       "socials": [
         {
           "label": "envelope",
-          "style": "fas",
-          "url": "mailto:me@jamescliff.com"
-        },
-        {
-          "label": "instagram",
-          "style": "fab",
-          "url": "https://instagram.com/jamescliffmedia"
-        },
-        {
-          "label": "twitter",
-          "style": "fab",
-          "url": "https://twitter.com/jamescliffmedia"
-        },
-        {
-          "label": "spotify",
-          "style": "fab",
           "url": ""
         },
         {
+          "label": "instagram",
+          "url": "https://instagram.com/iamcatullus"
+        },
+        {
+          "label": "twitter",
+          "url": "https://twitter.com/iamCatullus"
+        },
+        {
+          "label": "spotify",
+          "url": "https://open.spotify.com/artist/7pfStPqSDIm7uL5HHolwpp?si=6SNOykMCQ0eK9Ao5x4vcvg"
+        },
+        {
           "label": "twitch",
-          "style": "fab",
           "url": ""
         }
       ]
@@ -139,59 +125,49 @@
       "socials": [
         {
           "label": "envelope",
-          "style": "fas",
           "url": "mailto:me@jamescliff.com"
         },
         {
           "label": "instagram",
-          "style": "fab",
           "url": "https://instagram.com/jamescliffmedia"
         },
         {
           "label": "twitter",
-          "style": "fab",
           "url": "https://twitter.com/jamescliffmedia"
         },
         {
           "label": "spotify",
-          "style": "fab",
-          "url": ""
+          "url": "https://open.spotify.com/artist/4LC9nY3eZTxQYqd02gKOMl?si=xzdU-PB_SBy0jsSs7Wu10Q"
         },
         {
           "label": "twitch",
-          "style": "fab",
-          "url": ""
+          "url": "https://www.twitch.tv/jamescliffmedia"
         }
       ]
     },
     {
-      "name": "Liam Odd",
+      "name": "Liam McGhie",
       "image": "/images/people/liamodd.jpg",
       "roles": ["Producer", "Engineer"],
       "socials": [
         {
           "label": "envelope",
-          "style": "fas",
-          "url": "mailto:me@jamescliff.com"
+          "url": ""
         },
         {
           "label": "instagram",
-          "style": "fab",
-          "url": "https://instagram.com/jamescliffmedia"
+          "url": "https://instagram.com/just.call.me.liam"
         },
         {
           "label": "twitter",
-          "style": "fab",
-          "url": "https://twitter.com/jamescliffmedia"
+          "url": "https://twitter.com/liammcghie_"
         },
         {
           "label": "spotify",
-          "style": "fab",
           "url": ""
         },
         {
           "label": "twitch",
-          "style": "fab",
           "url": ""
         }
       ]
@@ -199,31 +175,26 @@
     {
       "name": "Nahom",
       "image": "/images/people/nahom.jpeg",
-      "roles": ["Producer", "Engineer"],
+      "roles": ["Producer"],
       "socials": [
         {
           "label": "envelope",
-          "style": "fas",
-          "url": "mailto:me@jamescliff.com"
-        },
-        {
-          "label": "instagram",
-          "style": "fab",
-          "url": "https://instagram.com/jamescliffmedia"
-        },
-        {
-          "label": "twitter",
-          "style": "fab",
-          "url": "https://twitter.com/jamescliffmedia"
-        },
-        {
-          "label": "spotify",
-          "style": "fab",
           "url": ""
         },
         {
+          "label": "instagram",
+          "url": "https://instagram.com/nahhhhom"
+        },
+        {
+          "label": "twitter",
+          "url": "https://twitter.com/nahhhhom"
+        },
+        {
+          "label": "spotify",
+          "url": "https://open.spotify.com/artist/7MRSAqtphArpENGL3K7zlV?si=3_d1Y8dOSrCjYl5ynCEUQQ"
+        },
+        {
           "label": "twitch",
-          "style": "fab",
           "url": ""
         }
       ]
@@ -231,19 +202,30 @@
   ],
   "footer": {
     "title": "Untitled Recordings",
-    "description": "🎙 Recording  |  🎹 Production <br> 🎧 Mixing  |  💿 Mastering",
     "socials": [
       {
-        "label": "",
-        "url": ""
+        "label": "discord",
+        "color": "#5865F2",
+        "src": "/icons/discord.svg",
+        "url": "https://discord.gg/cmDDk64bCj"
       },
       {
-        "label": "",
-        "url": ""
+        "label": "instagram",
+        "color": "#e1306c",
+        "src": "/icons/instagram.svg",
+        "url": "https://instagram.com/untitledrecordings"
       },
       {
-        "label": "",
-        "url": ""
+        "label": "twitter",
+        "color": "#1da1f2",
+        "src": "/icons/twitter.svg",
+        "url": "https://twitter.com/_untrecordings"
+      },
+      {
+        "label": "twitch",
+        "color": "#6441A4",
+        "src": "/icons/twitch.svg",
+        "url": "https://twitch.tv/untitledrecordings"
       }
     ]
   }
