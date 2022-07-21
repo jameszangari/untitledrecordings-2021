@@ -9,6 +9,7 @@ import Artist from "@/components/Artist";
 import Song from "@/components/Song";
 import Button from "@/components/Button";
 import index from "@/json/index";
+import { motion } from "framer-motion";
 
 export default function Index({ results }) {
   const allArtists = index.artists;
@@ -69,15 +70,35 @@ export default function Index({ results }) {
       <Hero />
       <section className="c-artists-row pb-24" id="artists">
         <h1 className="ur-heading text-center py-10">Our Artists</h1>
-        <div className="c-artists-row__group flex flex-row flex-wrap justify-center max-w-6xl mx-auto">
+        <motion.div
+          className="c-artists-row__group flex flex-row flex-wrap justify-center max-w-6xl mx-auto"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          animate={{
+            transition: {
+              duration: 2,
+            },
+          }}
+        >
           {getArtists()}
-        </div>
+        </motion.div>
       </section>
       <section className="pb-24" id="music">
         <h1 className="ur-heading text-center py-10">Featured Music</h1>
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center p-4 max-w-6xl mx-auto">
+        <motion.div
+          className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center p-4 max-w-6xl mx-auto"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          animate={{
+            transition: {
+              duration: 2,
+            },
+          }}
+        >
           {getProjects().slice(0, postNum)}
-        </div>
+        </motion.div>
         <Button
           color="red"
           click={handleClick}
@@ -87,9 +108,19 @@ export default function Index({ results }) {
       </section>
       <section className="pb-24" id="videos">
         <h1 className="ur-heading text-center py-10">Featured Videos</h1>
-        <div className="flex flex-col flex-wrap justify-center items-center gap-8 p-4 max-w-6xl mx-auto">
+        <motion.div
+          className="flex flex-col flex-wrap justify-center items-center gap-8 p-4 max-w-6xl mx-auto"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          animate={{
+            transition: {
+              duration: 2,
+            },
+          }}
+        >
           {getVideos()}
-        </div>
+        </motion.div>
       </section>
     </div>
   );

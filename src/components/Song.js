@@ -138,16 +138,8 @@ export default function Song({ url, props }) {
           </div>
         </Dialog>
       </Transition>
-      {/* <div className="h-64 w-64 sm:h-80 sm:w-80 opacity-0 hover:opacity-100 transition-all bg-black/75 cursor-pointer absolute z-10 grid place-items-center">
-        <Button
-          color={"red"}
-          label={"Stream"}
-          props={""}
-          click={() => setIsOpen(true)}
-        />
-      </div> */}
       <div
-        className="group cursor-pointer sm:max-w-none max-w-[300px]"
+        className="group cursor-pointer sm:max-w-none max-w-[300px] transition-all"
         onClick={() => setIsOpen(true)}
       >
         {data.image_url && (
@@ -157,6 +149,7 @@ export default function Song({ url, props }) {
             loading={"lazy"}
             height={640}
             width={640}
+            className="group-hover:grayscale"
           />
         )}
         <div className="text-center">

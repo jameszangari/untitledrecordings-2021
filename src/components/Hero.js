@@ -4,11 +4,23 @@ import LogoFull from "@/icons/logoFull";
 import Logo from "@/icons/logo";
 import Caret from "@/icons/caret";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 function Hero() {
   return (
     <>
-      <section className="max-w-6xl mx-auto p-4 h-screen grid place-items-center">
+      <motion.section
+        className="max-w-6xl mx-auto p-4 h-screen grid place-items-center"
+        initial={{ opacity: 0, y: -100 }}
+        animate={{
+          y: 0,
+          opacity: 1,
+          transition: {
+            duration: 1,
+          },
+        }}
+        exit={{ opacity: 0 }}
+      >
         <div>
           <LogoFull className="w-full hidden md:block" />
           <Logo className="w-full md:hidden block" />
@@ -19,7 +31,7 @@ function Hero() {
             </p>
           </div>
         </div>
-      </section>
+      </motion.section>
       <Link href="/#artists" passHref>
         <a>
           <Caret className="cursor-pointer absolute bottom-10 mx-auto w-full" />
