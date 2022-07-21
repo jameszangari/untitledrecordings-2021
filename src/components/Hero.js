@@ -20,9 +20,11 @@ function Hero() {
           </div>
         </div>
       </section>
-      <a href="/#artists">
-        <Caret className="cursor-pointer absolute bottom-10 mx-auto w-full" />
-      </a>
+      <Link href="/#artists" passHref>
+        <a>
+          <Caret className="cursor-pointer absolute bottom-10 mx-auto w-full" />
+        </a>
+      </Link>
     </>
   );
 }
