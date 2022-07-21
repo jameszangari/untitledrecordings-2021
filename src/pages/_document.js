@@ -16,8 +16,6 @@ export default function Document() {
         <link rel="mask-icon" color="#000000" href="/safari-pinned-tab.svg" />
         <link rel="apple-touch-startup-image" href="/jamescliff-cover.jpg" />
         <link rel="shortcut icon" href="/favicon.ico" />
-        {/* <link rel="stylesheet" href="https://use.typekit.net/yae4mky.css" /> */}
-        {/* <link rel="stylesheet" href="/fonts/fonts.css" /> */}
       </Head>
       <body>
         <Main />

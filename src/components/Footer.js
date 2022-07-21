@@ -5,6 +5,7 @@ import Instagram from "@/icons/instagram";
 import Twitter from "@/icons/twitter";
 import Twitch from "@/icons/twitch";
 import Emoji from "@/icons/emoji";
+import LogoFull from "@/icons/logoFull";
 
 export default function Footer() {
   const getCurrentYear = () => {
@@ -13,9 +14,12 @@ export default function Footer() {
   return (
     <section id="contact">
       <div className="bg-gradient-to-r from-ur_red to-ur_blue w-full h-2"></div>
-      <div className="flex flex-col justify-center max-w-sm mx-auto">
-        <h1 className="font-secondary font-extrabold italic text-2xl mt-12 text-center">
+      <div className="flex flex-col justify-center max-w-sm mx-auto px-4">
+        {/* <h1 className="font-secondary font-extrabold italic text-2xl mt-12 text-center">
           Untitled Recordings
+        </h1> */}
+        <h1 className="mt-12">
+          <LogoFull className="w-full" />
         </h1>
         <div className="grid grid-cols-2 justify-center gap-2 mt-6 w-64 mx-auto">
           <span className="flex flex-row w-max">

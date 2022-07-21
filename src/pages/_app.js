@@ -6,6 +6,7 @@ import index from "@/json/index";
 
 function MyApp({ Component, pageProps }) {
   const seo = index.meta;
+  console.log(seo);
   return (
     <>
       <Head>

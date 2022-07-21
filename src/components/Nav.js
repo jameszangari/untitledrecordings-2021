@@ -1,108 +1,61 @@
 import React, { useState } from "react";
-// import "hamburgers/dist/hamburgers.css";
+import "hamburgers/dist/hamburgers.css";
 import index from "@/json/index";
-import Link from "next/link";
 
 export default function HeaderGlobal() {
-  const [toggle, setToggle] = useState(null);
   const [open, setOpen] = useState(false);
   const navigation = index.navigation;
+
+  function toggleMenuState(e) {
+    setOpen((toggle) => {
+      const newState = !toggle;
+      return newState;
+    });
+  }
   return (
-    <div className="c-header">
-      {/* <MediaQuery query='(min-width: 1024px)'>
-        <h1 className='c-header__logo c-header__logo-full'>
-          <a href='/'>Untitled Recordings</a>
-        </h1>
-        <nav className='c-navigation__desktop' role='navigation' aria-label='primary'>
-          <ul
-            className={
-              open
-                ? 'c-navigation__desktop-menu c-navigation__desktop-menu--open'
-                : 'c-navigation__desktop-menu'
-            }
-          >
-            {navigation.map((nav, i) => (
-              <li className='c-navigation__desktop-menu-item' key={'main ' + i}>
-                {
-                  <a
-                    className={
-                      toggle === i
-                        ? 'c-navigation__desktop-link is-active'
-                        : 'c-navigation__desktop-link'
-                    }
-                    tabIndex={i}
-                    role='button'
-                    onClick={() =>
-                      setToggle(toggle => (toggle === i ? null : i))
-                    }
-                    href={nav.url ? nav.url : null}
-                  >
-                    {nav.label}
-                  </a>
-                }
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </MediaQuery> */}
-      {/* <MediaQuery query='(max-width: 1023px)'> */}
-      <Link href="/" passHref>
-        <h1 className="font-secondary font-extrabold italic text-2xl">UR</h1>
-      </Link>
+    <div className="w-full fixed flex justify-end top-0 bg-ur_black z-40 p-4">
       <button
         className={
-          open
-            ? "c-navigation__hamburger js-navigation__hamburger hamburger--spin is-active"
-            : "c-navigation__hamburger js-navigation__hamburger hamburger--spin"
+          open ? "z-50 hamburger--spin is-active" : "z-50 hamburger--spin"
         }
         type="button"
         onClick={() => {
           setOpen(!open);
         }}
       >
-        Toggle Menu
         <span className="hamburger-box">
           <span className="hamburger-inner"></span>
         </span>
       </button>
-      {/* </MediaQuery> */}
       {open && (
-        <nav
-          className="c-navigation__mobile"
-          role="navigation"
-          aria-label="primary"
-        >
-          <ul
-            className={
-              open
-                ? "c-navigation__mobile-menu c-navigation__mobile-menu--open"
-                : "c-navigation__mobile-menu"
-            }
+        <>
+          <div className="absolute top-0 z-30 w-64 bg-black">
+            <div className="h-screen w-[6px] bg-gradient-to-b from-ur_blue to-ur_purple"></div>
+          </div>
+          <nav
+            className="absolute h-screen top-0 right-0 bg-ur_black pt-24 px-16 w-64 z-40"
+            role="navigation"
+            aria-label="primary"
           >
-            {navigation.map((nav, i) => (
-              <li className="c-navigation__mobile-menu-item" key={i}>
-                {
-                  <a
-                    className={
-                      toggle === i
-                        ? "c-navigation__mobile-link is-active"
-                        : "c-navigation__mobile-link"
-                    }
-                    tabIndex={i}
-                    role="button"
-                    onClick={() =>
-                      setToggle((toggle) => (toggle === i ? null : i))
-                    }
-                    href={nav.url ? nav.url : null}
-                  >
-                    {nav.label}
-                  </a>
-                }
-              </li>
-            ))}
-            <div className="c-header__line"></div>
-          </ul>
-        </nav>
+            <ul className="ur-title uppercase flex flex-col gap-4 justify-center">
+              {navigation.map((nav, i) => (
+                <li className="hover:text-ur_blue transition-all" key={i}>
+                  {
+                    <a
+                      className=""
+                      tabIndex={i}
+                      role="button"
+                      onClick={toggleMenuState}
+                      href={nav.url ? nav.url : null}
+                    >
+                      {nav.label}
+                    </a>
+                  }
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </>
       )}
     </div>
   );

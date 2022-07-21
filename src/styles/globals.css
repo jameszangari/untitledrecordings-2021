@@ -9,6 +9,8 @@ body {
   @apply bg-black text-white;
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
   font-family: "Ambit", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -40,7 +42,7 @@ a {
   margin: 0 35%;
   padding: 5px;
   font-size: 20px;
-  outline: 3px solid red;
+  outline: 3px solid #ff2e35;
   text-align: center;
   z-index: 999;
 }
@@ -60,6 +62,22 @@ a {
 }
 .ur-title {
   @apply font-primary font-semibold text-2xl;
+}
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  background: #f9f9f9 !important;
+  height: 3px !important;
+  border-radius: 0px !important;
+  margin-top: 0px !important;
+}
+
+/* Anchors */
+#artists,
+#music,
+#videos,
+#contact {
+  scroll-margin-top: 30px;
 }
 
 @font-face {
