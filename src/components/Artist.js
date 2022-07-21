@@ -72,7 +72,7 @@ export default function Artist({ props }) {
                   {props.socials.map((item, i) => {
                     const name = item.label;
                     const src = item.url;
-                    if (name.includes("spotify")) {
+                    if (name.includes("spotify") && src != "") {
                       return (
                         <Link href={src} passHref key={i}>
                           <a target="_blank" rel="noopener noreferrer">
@@ -81,7 +81,7 @@ export default function Artist({ props }) {
                         </Link>
                       );
                     }
-                    if (name.includes("envelope")) {
+                    if (name.includes("envelope") && src != "") {
                       return (
                         <Link href={src} passHref key={i}>
                           <a target="_blank" rel="noopener noreferrer">
@@ -90,7 +90,7 @@ export default function Artist({ props }) {
                         </Link>
                       );
                     }
-                    if (name.includes("instagram")) {
+                    if (name.includes("instagram") && src != "") {
                       return (
                         <Link href={src} passHref key={i}>
                           <a target="_blank" rel="noopener noreferrer">
@@ -99,7 +99,7 @@ export default function Artist({ props }) {
                         </Link>
                       );
                     }
-                    if (name.includes("twitter")) {
+                    if (name.includes("twitter") && src != "") {
                       return (
                         <Link href={src} passHref key={i}>
                           <a target="_blank" rel="noopener noreferrer">
@@ -108,7 +108,7 @@ export default function Artist({ props }) {
                         </Link>
                       );
                     }
-                    if (name.includes("twitch")) {
+                    if (name.includes("twitch") && src != "") {
                       return (
                         <Link href={src} passHref key={i}>
                           <a target="_blank" rel="noopener noreferrer">
