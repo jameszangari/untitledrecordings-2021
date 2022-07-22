@@ -3,12 +3,13 @@ import "@/styles/globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import index from "@/json/index";
+import { GoogleAnalytics } from "nextjs-google-analytics";
 
 function MyApp({ Component, pageProps }) {
   const seo = index.meta;
-  console.log(seo);
   return (
     <>
+      <GoogleAnalytics />
       <Head>
         {/* Recommended Meta Tags */}
         <meta charSet="utf-8" />
