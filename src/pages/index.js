@@ -49,6 +49,9 @@ export default function Index({ results }) {
           <div key={i} className="aspect-video w-full h-full max-w-2xl">
             <ReactPlayer
               url={link}
+              config={{
+                youtube: { playerVars: { origin: "https://www.youtube.com" } },
+              }}
               width="100%"
               height="100%"
               className="aspect-video"
