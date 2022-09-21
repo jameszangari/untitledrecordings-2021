@@ -88,7 +88,7 @@ export default function Index({ results }) {
         </motion.div>
       </section>
       <section className="pb-24" id="music">
-        <h1 className="ur-heading text-center py-10">Featured Music</h1>
+        <h1 className="ur-heading text-center py-10">Recent Music</h1>
         <motion.div
           className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center p-4 max-w-6xl mx-auto"
           initial={{ opacity: 0 }}
