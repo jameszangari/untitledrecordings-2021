@@ -17,17 +17,22 @@ export default function Song({ url, props }) {
 
   useEffect(() => {
     setLoading(true);
-    fetch(
-      `https://api.song.link/v1-alpha.1/links?url=${encodeURIComponent(
-        cleanedUrl
-      )}&userCountry=US&songIfSingle=true&key=499b4465-1232-47c8-b46b-47c8d2e78ede`
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data);
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          `https://api.song.link/v1-alpha.1/links?url=${encodeURIComponent(
+            cleanedUrl
+          )}&userCountry=US&songIfSingle=true&key=499b4465-1232-47c8-b46b-47c8d2e78ede`
+        );
+        const json = await response.json();
+        setData(json);
         setLoading(false);
-      })
-      .catch((err) => console.error(err));
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchData();
   }, [cleanedUrl]);
   const songID = data?.entityUniqueId;
   const song = data?.entitiesByUniqueId?.[songID];
