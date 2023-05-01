@@ -8,6 +8,7 @@ import Tunes from "./Icons/itunes";
 import YouTube from "./Icons/youtube";
 import Image from "next/image";
 import Link from "next/link";
+import handler from "api/song";
 
 export default function Song({ url, props }) {
   const cleanedUrl = url.replace(/^"(.*)"[,]*$/, "$1");
@@ -17,23 +18,37 @@ export default function Song({ url, props }) {
 
   useEffect(() => {
     setLoading(true);
+    // declare the data fetching function
     const fetchData = async () => {
-      try {
-        const response = await fetch(
-          `https://api.song.link/v1-alpha.1/links?url=${encodeURIComponent(
-            cleanedUrl
-          )}&userCountry=US&songIfSingle=true&key=499b4465-1232-47c8-b46b-47c8d2e78ede`
-        );
-        const json = await response.json();
-        setData(json);
-        setLoading(false);
-      } catch (error) {
-        console.error(error);
-      }
+      const data = await handler(`/api/song?url=${cleanedUrl}`);
+      setData(data);
     };
 
-    fetchData();
+    // call the function
+    fetchData()
+      // make sure to catch any error
+      .catch(console.error);
   }, [cleanedUrl]);
+
+  // useEffect(() => {
+  //   setLoading(true);
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await fetch(
+  //         `https://api.song.link/v1-alpha.1/links?url=${encodeURIComponent(
+  //           cleanedUrl
+  //         )}&userCountry=US&songIfSingle=true&key=499b4465-1232-47c8-b46b-47c8d2e78ede`
+  //       );
+  //       const json = await response.json();
+  //       setData(json);
+  //       setLoading(false);
+  //     } catch (error) {
+  //       console.error(error);
+  //     }
+  //   };
+
+  //   fetchData();
+  // }, [cleanedUrl]);
   const songID = data?.entityUniqueId;
   const song = data?.entitiesByUniqueId?.[songID];
   const songImage = data?.entitiesByUniqueId?.[songID]["thumbnailUrl"];
