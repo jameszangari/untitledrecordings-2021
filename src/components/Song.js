@@ -20,8 +20,9 @@ export default function Song({ url, props }) {
     setLoading(true);
     // declare the data fetching function
     const fetchData = async () => {
-      const data = await handler(`/api/song?url=${cleanedUrl}`);
+      const data = await handler(cleanedUrl);
       setData(data);
+      setLoading(false);
     };
 
     // call the function
@@ -49,6 +50,8 @@ export default function Song({ url, props }) {
 
   //   fetchData();
   // }, [cleanedUrl]);
+  console.log(data);
+
   const songID = data?.entityUniqueId;
   const song = data?.entitiesByUniqueId?.[songID];
   const songImage = data?.entitiesByUniqueId?.[songID]["thumbnailUrl"];
