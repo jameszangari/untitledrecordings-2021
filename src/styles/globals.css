@@ -65,7 +65,7 @@ a {
   @apply font-primary font-normal text-base;
 }
 .ur-subtitle {
-  @apply font-primary uppercase font-semibold text-lg text-ur_gray;
+  @apply font-primary uppercase font-semibold text-base text-ur_gray;
 }
 .ur-title {
   @apply font-primary font-semibold text-2xl;
