@@ -44,8 +44,6 @@ export default function Song({ url, props }) {
     fetchData();
   }, [cleanedUrl]);
 
-  console.log(data);
-
   const songID = data?.entityUniqueId;
   const song = data?.entitiesByUniqueId?.[songID];
   const songImage = data?.entitiesByUniqueId?.[songID]["thumbnailUrl"];
