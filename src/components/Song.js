@@ -19,20 +19,7 @@ export default function Song({ url, props }) {
     setLoading(true);
     async function fetchData() {
       try {
-        const response = await fetch(
-          `https://api.song.link/v1-alpha.1/links?url=${encodeURIComponent(
-            cleanedUrl
-          )}&userCountry=US&songIfSingle=true&key=${
-            process.env.NEXT_PUBLIC_ODELSI_KEY
-          }`,
-          {
-            method: "GET",
-            headers: {
-              "Content-Type": "application/json",
-              "Access-Control-Allow-Origin": "*",
-            },
-          }
-        );
+        const response = await fetch(`/api/song?url=${cleanedUrl}`);
         const json = await response.json();
         setData(json);
         setLoading(false);
