@@ -162,7 +162,7 @@ export default function Song({ url, props }) {
           />
 
           <div className="text-center">
-            <h2 className="ur-subtitle mt-4 mb-2">{songArtist}</h2>
+            <h2 className="ur-subtitle mt-4 mb-2 truncate">{songArtist}</h2>
             <h1 className="ur-title">{songTitle}</h1>
             <Button
               color={"gray"}
